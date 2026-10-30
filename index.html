@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase - Discover premium electronics, fashion, footwear, watches, and accessories with exclusive deals and fast delivery.">
+  <title>ShopEase | Modern E-Commerce Store</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <div class="announcement-text">
+        <span class="badge-fire"><i class="fa-solid fa-bolt"></i> Flash Sale</span>
+        <span>Use code <strong>SHOPEASE10</strong> for 10% OFF your entire first order!</span>
+      </div>
+      <div class="announcement-links">
+        <a href="#help-faq"><i class="fa-regular fa-circle-question"></i> Help & FAQ</a>
+        <span class="divider">|</span>
+        <span class="currency-selector"><i class="fa-solid fa-globe"></i> USD ($)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <!-- Mobile Hamburger Toggle -->
+      <button class="icon-btn mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="ShopEase Home">
+        <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+        <span class="logo-text">Shop<span>Ease</span></span>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="nav-search-wrap">
+        <form class="nav-search-form" id="searchForm" onsubmit="event.preventDefault();">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input 
+            type="search" 
+            id="searchInput" 
+            placeholder="Search electronics, sneakers, watches, fashion..." 
+            autocomplete="off"
+            aria-label="Search products"
+          >
+          <button type="button" class="search-clear-btn" id="searchClearBtn" aria-label="Clear search" title="Clear search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="main-nav" id="mainNav">
+        <div class="mobile-nav-header">
+          <div class="mobile-nav-logo">
+            <i class="fa-solid fa-bag-shopping"></i> Shop<span>Ease</span>
+          </div>
+          <button class="icon-btn close-nav-btn" id="closeNavBtn" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active" data-nav="home"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="nav-item"><a href="#products-section" class="nav-link" data-nav="products"><i class="fa-solid fa-store"></i> Products</a></li>
+          <li class="nav-item"><a href="#categories-section" class="nav-link" data-nav="categories"><i class="fa-solid fa-layer-group"></i> Categories</a></li>
+          <li class="nav-item"><a href="#features-section" class="nav-link" data-nav="about"><i class="fa-solid fa-shield-halved"></i> Why Us</a></li>
+          <li class="nav-item mobile-only"><a href="#deals-banner" class="nav-link" data-nav="deals"><i class="fa-solid fa-tag"></i> Special Deals</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action Icons: Wishlist, User/Login, Cart -->
+      <div class="header-actions">
+        <!-- Wishlist Button -->
+        <button class="action-btn" id="wishlistToggleBtn" aria-label="View Wishlist" title="Your Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="action-badge" id="wishlistCountBadge">0</span>
+        </button>
+
+        <!-- Login / User Button -->
+        <button class="action-btn user-btn" id="userModalBtn" aria-label="Account Login" title="Account Login">
+          <i class="fa-regular fa-user"></i>
+          <span class="user-btn-label" id="userGreeting">Login</span>
+        </button>
+
+        <!-- Shopping Cart Button -->
+        <button class="action-btn cart-btn-header" id="cartToggleBtn" aria-label="View Shopping Cart" title="View Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="action-badge" id="cartCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>New Season Collection 2026</span>
+          </div>
+          <h1 class="hero-title">
+            Elevate Your Style with <span class="gradient-text">Next-Gen Tech</span> & Fashion
+          </h1>
+          <p class="hero-description">
+            Explore curated high-grade electronics, iconic lifestyle fashion, luxury watches, and signature accessories. Crafted for those who demand excellence.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#products-section" class="btn btn-primary btn-lg" id="shopNowHeroBtn">
+              <span>Shop Now</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#categories-section" class="btn btn-secondary btn-lg">
+              <i class="fa-solid fa-compass"></i>
+              <span>Explore Categories</span>
+            </a>
+          </div>
+          <!-- Hero Statistics -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">25k+</span>
+              <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">1,200+</span>
+              <span class="stat-label">Premium Products</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">4.9</span>
+              <span class="stat-label">
+                <i class="fa-solid fa-star text-gold"></i> Rating (15k reviews)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase Card -->
+        <div class="hero-visual">
+          <div class="hero-card-main">
+            <div class="hero-floating-badge top-right">
+              <span class="fire-icon"><i class="fa-solid fa-fire"></i></span>
+              <div>
+                <strong>35% OFF</strong>
+                <small>Limited time deal</small>
+              </div>
+            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" 
+              alt="Premium Wireless Headphones"
+              class="hero-img"
+              loading="eager"
+            >
+            <div class="hero-product-info">
+              <div class="hero-product-tags">
+                <span class="category-pill">Electronics</span>
+                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.9</span>
+              </div>
+              <h3>Aura Pro Wireless ANC Headphones</h3>
+              <div class="hero-price-row">
+                <div class="prices">
+                  <span class="current-price">$199.99</span>
+                  <span class="original-price">$299.99</span>
+                </div>
+                <button class="btn btn-sm btn-primary hero-quick-add" data-id="1">
+                  <i class="fa-solid fa-cart-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Secondary Floating Mini-cards -->
+          <div class="floating-mini-card mini-card-left">
+            <div class="mini-card-icon">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div>
+              <h6>Fast Free Shipping</h6>
+              <p>On orders above $75</p>
+            </div>
+          </div>
+
+          <div class="floating-mini-card mini-card-right">
+            <div class="mini-card-icon verified">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div>
+              <h6>100% Authentic</h6>
+              <p>Guaranteed Quality</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Propositions / Highlights Strip -->
+    <section class="features-section" id="features-section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-truck-ramp-box"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Free Global Shipping</h4>
+              <p>Complimentary delivery on orders over $75 worldwide.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Secure Payment</h4>
+              <p>256-bit encrypted checkout with Stripe, PayPal & Apple Pay.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-rotate-left"></i>
+            </div>
+            <div class="feature-text">
+              <h4>30-Day Easy Returns</h4>
+              <p>Hassle-free exchanges and complete money-back guarantee.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="feature-text">
+              <h4>24/7 Dedicated Support</h4>
+              <p>Friendly professional assistance anytime you need it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section class="categories-section" id="categories-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Curated Departments</span>
+          <h2 class="section-title">Explore by Popular Categories</h2>
+          <p class="section-desc">Browse through our meticulously curated product lineups crafted for modern lifestyles.</p>
+        </div>
+
+        <div class="category-cards-grid">
+          <!-- Category: Electronics -->
+          <div class="category-card" data-category="electronics" tabindex="0" role="button" aria-label="Browse Electronics">
+            <div class="category-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=600&q=80" alt="Electronics" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <div class="cat-icon"><i class="fa-solid fa-laptop"></i></div>
+              <h3>Electronics</h3>
+              <p class="cat-count">Audio, Wearables & Gadgets</p>
+              <span class="cat-link">Shop Category <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Category: Fashion -->
+          <div class="category-card" data-category="fashion" tabindex="0" role="button" aria-label="Browse Fashion">
+            <div class="category-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=600&q=80" alt="Fashion Apparel" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <div class="cat-icon"><i class="fa-solid fa-shirt"></i></div>
+              <h3>Fashion</h3>
+              <p class="cat-count">Trendy Apparel & Outerwear</p>
+              <span class="cat-link">Shop Category <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Category: Shoes -->
+          <div class="category-card" data-category="shoes" tabindex="0" role="button" aria-label="Browse Shoes">
+            <div class="category-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Footwear & Sneakers" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <div class="cat-icon"><i class="fa-solid fa-shoe-prints"></i></div>
+              <h3>Shoes</h3>
+              <p class="cat-count">Sneakers, Loafers & Boots</p>
+              <span class="cat-link">Shop Category <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Category: Watches -->
+          <div class="category-card" data-category="watches" tabindex="0" role="button" aria-label="Browse Watches">
+            <div class="category-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80" alt="Luxury & Minimalist Watches" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <div class="cat-icon"><i class="fa-solid fa-clock"></i></div>
+              <h3>Watches</h3>
+              <p class="cat-count">Chronographs & Minimalist</p>
+              <span class="cat-link">Shop Category <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Category: Accessories -->
+          <div class="category-card" data-category="accessories" tabindex="0" role="button" aria-label="Browse Accessories">
+            <div class="category-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80" alt="Accessories" loading="lazy">
+              <div class="category-overlay"></div>
+            </div>
+            <div class="category-content">
+              <div class="cat-icon"><i class="fa-solid fa-glasses"></i></div>
+              <h3>Accessories</h3>
+              <p class="cat-count">Wallets, Eyewear & Bags</p>
+              <span class="cat-link">Shop Category <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotional Banner / Flash Deals -->
+    <section class="deals-banner-section" id="deals-banner">
+      <div class="container">
+        <div class="deals-banner-box">
+          <div class="deals-content">
+            <span class="deals-tag"><i class="fa-solid fa-clock"></i> Limited Time Offer</span>
+            <h2>Exclusive Weekend Deals: Up to 50% Off</h2>
+            <p>Upgrade your everyday essentials with hand-picked deals across our premium catalog.</p>
+            <div class="deals-countdown" id="dealsCountdown">
+              <div class="countdown-unit">
+                <span class="unit-val" id="countHours">18</span>
+                <span class="unit-lbl">Hours</span>
+              </div>
+              <span class="colon">:</span>
+              <div class="countdown-unit">
+                <span class="unit-val" id="countMins">42</span>
+                <span class="unit-lbl">Mins</span>
+              </div>
+              <span class="colon">:</span>
+              <div class="countdown-unit">
+                <span class="unit-val" id="countSecs">30</span>
+                <span class="unit-lbl">Secs</span>
+              </div>
+            </div>
+            <div class="deals-cta">
+              <button class="btn btn-light btn-lg" id="viewDealsBtn">
+                <i class="fa-solid fa-bolt"></i> View Discounted Items
+              </button>
+            </div>
+          </div>
+          <div class="deals-image">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80" alt="Special Deal Gadget">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Products Section -->
+    <section class="products-section" id="products-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="products-header">
+          <div class="section-title-wrap">
+            <span class="section-subtitle">Our Catalog</span>
+            <h2 class="section-title">Trending Products</h2>
+            <p class="section-desc">Hand-selected items engineered for style, durability, and performance.</p>
+          </div>
+
+          <!-- Product Controls Toolbar: Category Pills, Sort, Results Count -->
+          <div class="products-controls">
+            <!-- Category Filter Buttons -->
+            <div class="category-filter-bar" id="categoryFilterBar" role="tablist">
+              <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
+                <i class="fa-solid fa-border-all"></i> All Products
+              </button>
+              <button class="filter-tab" data-filter="electronics" role="tab" aria-selected="false">
+                <i class="fa-solid fa-laptop"></i> Electronics
+              </button>
+              <button class="filter-tab" data-filter="fashion" role="tab" aria-selected="false">
+                <i class="fa-solid fa-shirt"></i> Fashion
+              </button>
+              <button class="filter-tab" data-filter="shoes" role="tab" aria-selected="false">
+                <i class="fa-solid fa-shoe-prints"></i> Shoes
+              </button>
+              <button class="filter-tab" data-filter="watches" role="tab" aria-selected="false">
+                <i class="fa-solid fa-clock"></i> Watches
+              </button>
+              <button class="filter-tab" data-filter="accessories" role="tab" aria-selected="false">
+                <i class="fa-solid fa-glasses"></i> Accessories
+              </button>
+            </div>
+
+            <!-- Sort and Filter Dropdown & Search Status -->
+            <div class="filter-secondary-bar">
+              <div class="results-counter" id="resultsCounter">
+                Showing <strong>16</strong> products
+              </div>
+
+              <div class="sort-controls">
+                <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort By:</label>
+                <select id="sortSelect" class="sort-select" aria-label="Sort products">
+                  <option value="featured">Featured / Best Match</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                  <option value="discount">Biggest Discount</option>
+                  <option value="name-asc">Alphabetical (A-Z)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filter Indicator / Reset -->
+        <div class="active-filter-chips" id="activeFilterChips" style="display: none;">
+          <span class="active-chip-label">Filters:</span>
+          <div class="chips-list" id="chipsList"></div>
+          <button class="clear-all-filters-btn" id="clearAllFiltersBtn">Reset All Filters</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid" aria-live="polite">
+          <!-- Dynamically populated via script.js -->
+        </div>
+
+        <!-- No Products Found State -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+          <div class="empty-icon"><i class="fa-solid fa-box-open"></i></div>
+          <h3>No Matching Products Found</h3>
+          <p>We couldn't find anything matching your search criteria. Try different keywords or reset your filters.</p>
+          <button class="btn btn-primary" id="resetSearchBtn">
+            <i class="fa-solid fa-rotate"></i> Reset Filters
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Social Proof Section -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Customer Love</span>
+          <h2 class="section-title">Loved by Thousands Worldwide</h2>
+          <p class="section-desc">Real stories from our passionate community of shoppers.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"The ANC headphones arrived within 2 days. The sound quality rivals $400 pairs! ShopEase's checkout was silky smooth."</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Sarah J.">
+              </div>
+              <div>
+                <h5>Sarah Jenkins</h5>
+                <small><i class="fa-solid fa-circle-check text-green"></i> Verified Buyer</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"The leather chronograph is a work of art. Looks even better in person than the photos. Customer service answered my question in 5 minutes!"</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Marcus V.">
+              </div>
+              <div>
+                <h5>Marcus Vance</h5>
+                <small><i class="fa-solid fa-circle-check text-green"></i> Verified Buyer</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"The oversized hoodie fits like a dream! Super soft cotton and premium stitching. Already placed my second order."</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Elena R.">
+              </div>
+              <div>
+                <h5>Elena Rostova</h5>
+                <small><i class="fa-solid fa-circle-check text-green"></i> Verified Buyer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-text">
+            <span class="newsletter-badge"><i class="fa-solid fa-envelope-open-text"></i> VIP Access</span>
+            <h3>Join the ShopEase VIP Club</h3>
+            <p>Subscribe now to receive <strong>15% OFF</strong> your next purchase, private sales access, and weekly styling tips.</p>
+          </div>
+          <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault();">
+            <div class="input-group">
+              <i class="fa-regular fa-envelope input-icon"></i>
+              <input type="email" id="newsletterEmail" placeholder="Enter your email address..." required>
+              <button type="submit" class="btn btn-primary newsletter-btn">
+                <span>Subscribe</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+            <span class="newsletter-privacy"><i class="fa-solid fa-lock"></i> We value your privacy. Unsubscribe anytime.</span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Responsive Footer -->
+  <footer class="site-footer" id="help-faq">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <a href="#" class="brand-logo footer-logo">
+            <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+            <span class="logo-text">Shop<span>Ease</span></span>
+          </a>
+          <p class="footer-description">
+            ShopEase is your curated destination for elevated living. We combine modern aesthetics, top-tier craftsmanship, and frictionless e-commerce.
+          </p>
+          <div class="footer-contact-info">
+            <p><i class="fa-solid fa-location-dot"></i> 550 Fifth Avenue, New York, NY 10036</p>
+            <p><i class="fa-solid fa-phone"></i> +1 (800) 555-EASE (3273)</p>
+            <p><i class="fa-solid fa-envelope"></i> support@shopease.store</p>
+          </div>
+          <!-- Social Icons -->
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="social-link twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="social-link pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-link youtube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="#products-section"><i class="fa-solid fa-chevron-right"></i> All Products</a></li>
+            <li><a href="#categories-section"><i class="fa-solid fa-chevron-right"></i> Product Categories</a></li>
+            <li><a href="#deals-banner"><i class="fa-solid fa-chevron-right"></i> Flash Deals</a></li>
+            <li><a href="#features-section"><i class="fa-solid fa-chevron-right"></i> Why Choose Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Departments</h4>
+          <ul class="footer-links">
+            <li><a href="#products-section" class="footer-cat-link" data-cat="electronics"><i class="fa-solid fa-chevron-right"></i> Electronics & Audio</a></li>
+            <li><a href="#products-section" class="footer-cat-link" data-cat="fashion"><i class="fa-solid fa-chevron-right"></i> Modern Fashion</a></li>
+            <li><a href="#products-section" class="footer-cat-link" data-cat="shoes"><i class="fa-solid fa-chevron-right"></i> Footwear & Sneakers</a></li>
+            <li><a href="#products-section" class="footer-cat-link" data-cat="watches"><i class="fa-solid fa-chevron-right"></i> Luxury Watches</a></li>
+            <li><a href="#products-section" class="footer-cat-link" data-cat="accessories"><i class="fa-solid fa-chevron-right"></i> Signature Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Customer Care & Policies -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Customer Support</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" class="footer-modal-trigger" data-type="shipping"><i class="fa-solid fa-chevron-right"></i> Shipping & Delivery</a></li>
+            <li><a href="javascript:void(0)" class="footer-modal-trigger" data-type="returns"><i class="fa-solid fa-chevron-right"></i> Returns & Refunds</a></li>
+            <li><a href="javascript:void(0)" class="footer-modal-trigger" data-type="tracking"><i class="fa-solid fa-chevron-right"></i> Track Your Order</a></li>
+            <li><a href="javascript:void(0)" class="footer-modal-trigger" data-type="faq"><i class="fa-solid fa-chevron-right"></i> FAQs</a></li>
+            <li><a href="javascript:void(0)" class="footer-modal-trigger" data-type="privacy"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Strip -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 <strong>ShopEase</strong> Inc. All Rights Reserved. Designed with passion for superior shopping experiences.</p>
+        <div class="payment-methods">
+          <span class="pay-tag"><i class="fa-brands fa-cc-visa"></i></span>
+          <span class="pay-tag"><i class="fa-brands fa-cc-mastercard"></i></span>
+          <span class="pay-tag"><i class="fa-brands fa-cc-amex"></i></span>
+          <span class="pay-tag"><i class="fa-brands fa-cc-paypal"></i></span>
+          <span class="pay-tag"><i class="fa-brands fa-cc-apple-pay"></i></span>
+          <span class="pay-tag"><i class="fa-brands fa-google-pay"></i></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll To Top Button -->
+  <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ==================== INTERACTIVE DRAWERS & MODALS ==================== -->
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div class="drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer" role="dialog" aria-modal="true">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Your Cart (<span id="drawerCartCount">0</span>)</h3>
+      </div>
+      <button class="icon-btn close-drawer-btn" id="closeCartBtn" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="shipping-progress-box">
+      <div class="shipping-info-text" id="shippingStatusText">
+        <span>Add <strong>$50.00</strong> more to unlock <strong>FREE Shipping!</strong></span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="shippingProgressBar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Container -->
+    <div class="drawer-body" id="cartItemsContainer">
+      <!-- Items dynamically populated via script.js -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="drawer-footer" id="cartFooter">
+      <!-- Promo code discount section -->
+      <div class="cart-promo-section">
+        <form class="promo-form" id="promoForm" onsubmit="event.preventDefault();">
+          <div class="promo-input-group">
+            <i class="fa-solid fa-tags promo-icon"></i>
+            <input type="text" id="promoInput" placeholder="Promo code (e.g. SHOPEASE10)" uppercase>
+            <button type="submit" class="btn btn-sm btn-dark" id="applyPromoBtn">Apply</button>
+          </div>
+        </form>
+        <div class="promo-status" id="promoStatusMessage"></div>
+      </div>
+
+      <!-- Pricing Summary Breakdown -->
+      <div class="cart-summary-breakdown">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="summary-line discount-line" id="discountLine" style="display: none;">
+          <span>Promo Discount (<span id="discountPercent">10%</span>)</span>
+          <span id="cartDiscount" class="text-green">-$0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Estimated Shipping</span>
+          <span id="cartShipping">$0.00</span>
+        </div>
+        <div class="summary-line summary-total">
+          <span>Total</span>
+          <span id="cartGrandTotal">$0.00</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="drawer-actions">
+        <button class="btn btn-primary btn-block checkout-btn" id="proceedToCheckoutBtn">
+          <span>Proceed to Checkout</span>
+          <i class="fa-solid fa-lock"></i>
+        </button>
+        <button class="btn btn-secondary btn-block clear-cart-btn" id="clearCartBtn">
+          <i class="fa-regular fa-trash-can"></i> Clear Cart
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Slide-Over Wishlist Drawer -->
+  <div class="drawer-backdrop" id="wishlistBackdrop"></div>
+  <aside class="cart-drawer wishlist-drawer" id="wishlistDrawer" aria-label="Wishlist Drawer" role="dialog" aria-modal="true">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <i class="fa-solid fa-heart text-coral"></i>
+        <h3>My Wishlist (<span id="drawerWishlistCount">0</span>)</h3>
+      </div>
+      <button class="icon-btn close-drawer-btn" id="closeWishlistBtn" aria-label="Close wishlist">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body" id="wishlistItemsContainer">
+      <!-- Items dynamically populated via script.js -->
+    </div>
+    <div class="drawer-footer" id="wishlistFooter" style="display: none;">
+      <button class="btn btn-primary btn-block" id="addAllWishlistToCartBtn">
+        <i class="fa-solid fa-cart-plus"></i> Move All to Cart
+      </button>
+    </div>
+  </aside>
+
+  <!-- Quick View Product Modal -->
+  <div class="modal-overlay" id="quickViewModal" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle">
+    <div class="modal-container quick-view-container">
+      <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Close quick view">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="quick-view-grid" id="quickViewContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- User Login & Sign Up Modal -->
+  <div class="modal-overlay" id="userModal" role="dialog" aria-modal="true" aria-labelledby="userModalTitle">
+    <div class="modal-container auth-modal-container">
+      <button class="modal-close-btn" id="closeUserModalBtn" aria-label="Close account modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tabLoginBtn">Sign In</button>
+        <button class="auth-tab-btn" id="tabRegisterBtn">Create Account</button>
+      </div>
+
+      <!-- Sign In Form -->
+      <form class="auth-form" id="loginForm">
+        <div class="auth-header">
+          <h3 id="userModalTitle">Welcome Back to ShopEase</h3>
+          <p>Sign in to access your orders, saved addresses, and wishlist.</p>
+        </div>
+        <div class="form-group">
+          <label for="loginEmail">Email Address</label>
+          <div class="input-with-icon">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" id="loginEmail" placeholder="you@example.com" value="alex.morgan@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-row-between">
+            <label for="loginPassword">Password</label>
+            <a href="javascript:void(0)" class="forgot-password">Forgot?</a>
+          </div>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="loginPassword" placeholder="••••••••" value="password123" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In
+        </button>
+        <div class="demo-auth-hint">
+          <small><i class="fa-solid fa-circle-info"></i> Demo credentials pre-filled. Just click <strong>Sign In</strong>!</small>
+        </div>
+      </form>
+
+      <!-- Register Form -->
+      <form class="auth-form" id="registerForm" style="display: none;">
+        <div class="auth-header">
+          <h3>Create an Account</h3>
+          <p>Join ShopEase for special member pricing, fast checkout, and rewards.</p>
+        </div>
+        <div class="form-group">
+          <label for="regName">Full Name</label>
+          <div class="input-with-icon">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="regName" placeholder="Alex Morgan" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="regEmail">Email Address</label>
+          <div class="input-with-icon">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" id="regEmail" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="regPassword">Create Password</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="regPassword" placeholder="Minimum 6 characters" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-user-plus"></i> Create Account
+        </button>
+      </form>
+
+      <!-- Logged In State Display -->
+      <div class="logged-in-view" id="loggedInView" style="display: none;">
+        <div class="user-avatar-badge">
+          <i class="fa-solid fa-circle-user"></i>
+        </div>
+        <h3 id="profileUserName">Alex Morgan</h3>
+        <p id="profileUserEmail">alex.morgan@example.com</p>
+        <div class="profile-actions">
+          <button class="btn btn-secondary btn-block" id="logoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i> Log Out
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+    <div class="modal-container checkout-modal-container">
+      <button class="modal-close-btn" id="closeCheckoutBtn" aria-label="Close checkout">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="checkout-header">
+        <div class="checkout-step-title">
+          <i class="fa-solid fa-shield-halved text-primary"></i>
+          <h3 id="checkoutModalTitle">Complete Your Order</h3>
+        </div>
+        <p>Fast & secure 256-bit encrypted checkout.</p>
+      </div>
+
+      <form class="checkout-form" id="checkoutForm" onsubmit="event.preventDefault();">
+        <div class="checkout-sections-grid">
+          <!-- Shipping Address -->
+          <div class="checkout-section-block">
+            <h4 class="checkout-subheading"><i class="fa-solid fa-truck"></i> 1. Shipping Information</h4>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="chkFirstName">First Name *</label>
+                <input type="text" id="chkFirstName" value="Alex" required>
+              </div>
+              <div class="form-group">
+                <label for="chkLastName">Last Name *</label>
+                <input type="text" id="chkLastName" value="Morgan" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="chkAddress">Street Address *</label>
+              <input type="text" id="chkAddress" value="742 Evergreen Terrace" required>
+            </div>
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="chkCity">City *</label>
+                <input type="text" id="chkCity" value="Springfield" required>
+              </div>
+              <div class="form-group">
+                <label for="chkState">State / Prov *</label>
+                <input type="text" id="chkState" value="OR" required>
+              </div>
+              <div class="form-group">
+                <label for="chkZip">ZIP / Postal *</label>
+                <input type="text" id="chkZip" value="97477" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Details -->
+          <div class="checkout-section-block">
+            <h4 class="checkout-subheading"><i class="fa-regular fa-credit-card"></i> 2. Payment Method</h4>
+            <div class="payment-method-options">
+              <label class="payment-option selected">
+                <input type="radio" name="paymentMethod" value="card" checked>
+                <span class="radio-custom"></span>
+                <span class="pay-label"><i class="fa-regular fa-credit-card"></i> Credit / Debit Card</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="paypal">
+                <span class="radio-custom"></span>
+                <span class="pay-label"><i class="fa-brands fa-paypal"></i> PayPal</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="cod">
+                <span class="radio-custom"></span>
+                <span class="pay-label"><i class="fa-solid fa-hand-holding-dollar"></i> Cash on Delivery</span>
+              </label>
+            </div>
+
+            <div class="card-details-inputs" id="cardInputs">
+              <div class="form-group">
+                <label for="chkCardNumber">Card Number</label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-credit-card"></i>
+                  <input type="text" id="chkCardNumber" placeholder="4532 •••• •••• 8821" value="4532 9980 1234 8821" required>
+                </div>
+              </div>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="chkCardExpiry">Expiry</label>
+                  <input type="text" id="chkCardExpiry" placeholder="MM/YY" value="09/28" required>
+                </div>
+                <div class="form-group">
+                  <label for="chkCardCvc">CVC / CVV</label>
+                  <input type="password" id="chkCardCvc" placeholder="•••" value="842" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Total Display inside Checkout -->
+            <div class="checkout-total-box">
+              <div class="chk-total-row">
+                <span>Total Due Now:</span>
+                <strong class="chk-price" id="checkoutTotalAmount">$0.00</strong>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block checkout-submit-btn" id="placeOrderBtn">
+              <i class="fa-solid fa-lock"></i>
+              <span>Pay & Place Order</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Success Celebration Modal -->
+  <div class="modal-overlay" id="orderSuccessModal" role="dialog" aria-modal="true">
+    <div class="modal-container success-modal-container">
+      <div class="success-animation-wrap">
+        <div class="checkmark-circle">
+          <i class="fa-solid fa-check"></i>
+        </div>
+      </div>
+      <h2>Thank You For Your Order!</h2>
+      <p class="order-number-text">Order ID: <strong id="orderIdDisplay">#SE-849204</strong></p>
+      <p class="success-desc">A confirmation email has been dispatched with tracking credentials. Your items are being prepared for rapid shipment.</p>
+      <div class="success-actions">
+        <button class="btn btn-primary btn-lg" id="continueShoppingBtn">
+          <i class="fa-solid fa-bag-shopping"></i> Continue Shopping
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Generic Info Modal (Shipping, Returns, FAQ) -->
+  <div class="modal-overlay" id="infoModal" role="dialog" aria-modal="true">
+    <div class="modal-container info-modal-container">
+      <button class="modal-close-btn" id="closeInfoModalBtn" aria-label="Close info dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="info-modal-header">
+        <h3 id="infoModalTitle">Customer Information</h3>
+      </div>
+      <div class="info-modal-content" id="infoModalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive"></div>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
